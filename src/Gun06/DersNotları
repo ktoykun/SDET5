@@ -1,0 +1,52 @@
+Çocuklar-Torunlar-Kardeşler
+
+Elemanı yakalayacak başka türlü yol yoksa bunu kullanıyoruz. ID'si class ı
+hiçbir şeyi olmayan elemanlara ulaşmak için, parametresi olan elemanları kullanıyoruz.
+ID'si şu olanın kardeşi vs. Son kozumuz bu yöntem.
+
+<div>  cocukları: span, span, div
+       tumcocukları: span, span, div, img, input
+
+  <span> merhaba 1 </span>
+  <span> merhaba 2 </span>
+
+  <div>  -> çocuk
+     <img src=logo.png>
+     <input type="text">
+  </div>
+
+</div>
+<label>merhaba</label> -kardeşi
+<h2>merhaba</h2>       -diğer kardeş
+kardeş -> bitişik kardeş
+kardeşler -> tüm kardeşleri
+
+***
+
+div[id='user-message'] > label
+id si user-message olan DIV in çocuklarından label olan
+
+div[id='user-message'] > label + span
+id si user-message olan DIV in çocuklarından label dan hemen sonraki span
+
+div[id='user-message'] > span   yukarıdaki ile aynı
+
+[id='get-input'] input
+id si get-input olan elemanın bütün cocuklarındaki ilk input olan
+
+***
+
+>     -> cocuklarda arar
+space -> tüm cocuklarda(torunlar dahil) arar
++     -> bitişik kardeş i bulur
+~     -> tüm kardeşlerde ara
+*     -> tüm çocuklarda arar
+
+***
+
+[class='nav navbar-nav'] > li+li+li
+[class='nav navbar-nav'] > :nth-child(3)
+
+yukarıdakilerin ikiside 3.Çocuk demekdir.
+
+
